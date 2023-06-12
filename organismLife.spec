@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(
-    ['organismLife.py'],
+    ['organismLife.pycd'],
     pathex=[],
     binaries=[],
     datas=[],
