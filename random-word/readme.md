@@ -1,0 +1,2 @@
+# What is this? 
+This Python script generates random words until it generates a word that matches a target word provided by the user. It measures the time it takes to generate the target word and displays the elapsed time.
