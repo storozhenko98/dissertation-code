@@ -5,7 +5,7 @@ import numpy as np
 pygame.init()
 
 # Set up some constants
-FPS = 100
+FPS = 1000
 
 # Create the window in fullscreen mode
 window = pygame.display.set_mode((0, 0), pygame.HWSURFACE | pygame.DOUBLEBUF | pygame.FULLSCREEN)
