@@ -43,7 +43,7 @@ model.add(tf.keras.layers.Dense(2))
 model.compile(optimizer='adam', loss='mse')
 
 # Train model
-model.fit(train_inputs, train_targets, epochs=10, validation_data=(test_inputs, test_targets))
+model.fit(train_inputs, train_targets, epochs=20, validation_data=(test_inputs, test_targets))
 
 # Evaluate on test set 
 test_preds = model.predict(test_inputs)
@@ -57,3 +57,13 @@ close_prices_recent = close_prices_recent.reshape(1,90,1)
 price_pred = model.predict(close_prices_recent)[0]
 price_pred = scaler.inverse_transform([price_pred]) 
 print("Predicted closing price 2 days later: {}".format(price_pred))
+
+# make prediction 100 times then average but only on second day 
+prediction = []
+for i in range(1000):
+    close_prices_recent = close_prices[-90:]
+    close_prices_recent = close_prices_recent.reshape(1,90,1)
+    price_pred = model.predict(close_prices_recent)[0]
+    price_pred = scaler.inverse_transform([price_pred])
+    prediction.append(price_pred[0][1])
+print("Predicted closing price 2 days later: {}".format(np.mean(prediction)))
