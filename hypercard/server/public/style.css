@@ -1,5 +1,7 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #F0F0F0;
+    color: #333;
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,25 +11,78 @@ body {
     height: 100vh;
 }
 
+header {
+    color: #333;
+}
+
 .card {
     width: 500px;
     height: 500px;
-    border: 1px solid #000;
+    border: 1px solid #333;
     margin: 20px;
+    position: relative;
+    background-color: #fff;
+}
+
+#inner-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 footer {
     display: flex;
     gap: 10px;
+    color: #333;
 }
 
 #command {
     width: 300px;
     height: 50px;
+    color: #333;
+    background-color: #fff;
 }
 
 aside {
     position: absolute;
     right: 10px;
     top: 10px;
+    width: 200px;
+    max-height: 100vh;
+    overflow-y: auto;
+    color: #333;
+    background-color: #fff; /* back to white */
+    border-radius: 10px; /* rounded corners */
+    padding: 10px; /* padding around the text */
+    text-align: center; /* centered text */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border: 1px solid #333;
+}
+
+/* Media query for screens narrower than 600px */
+@media screen and (max-width: 600px) {
+    .card {
+        width: 80%; /* Make the card narrower */
+        height: 80%; /* Make the card shorter */
+    }
+
+    #command {
+        width: 80%; /* Make the text box narrower */
+    }
+
+    aside {
+        width: 100%; /* Make the command history the full width of the screen */
+        position: static; /* Position it normally in the flow of the page */
+    }
 }

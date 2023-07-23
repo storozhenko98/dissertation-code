@@ -10,15 +10,34 @@
     <header>
         <h1>HyperCard 2.0</h1>
     </header>
-    <div id="card" class="card"></div>
+    <div id="card" class="card">
+        <div id="inner-card"></div>
+    </div>
     <footer>
         <textarea id="command" placeholder="Enter your command here"></textarea>
         <button id="submit">Submit</button>
+        <button id="publish">Publish</button>
+        <button id="browse">Browse</button>
+        <button id="clear">Clear</button>
     </footer>
     <aside>
         <h2>Command History</h2>
         <ul id="history"></ul>
     </aside>
+
+    <div id="modal" class="modal">
+        <label>
+            Text:
+            <input id="modal-text" type="text">
+        </label>
+        <label>
+            Color:
+            <input id="modal-color" type="color">
+        </label>
+        <button id="modal-save">Save</button>
+        <button id="modal-cancel">Cancel</button>
+    </div>
+
     <script src="/main.js"></script>
 </body>
 </html>
