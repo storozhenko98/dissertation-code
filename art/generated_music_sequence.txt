@@ -1,0 +1,1 @@
+Sequence: [Kick, Hi-Hat, Snare, Hi-Hat, Kick, Hi-Hat, Snare, Hi-Hat], Tempo: 120 BPM, Duration: Quarter notes
